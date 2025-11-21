@@ -1,4 +1,4 @@
-const BASE_URL = "http://192.168.1.132:5000";
+const BASE_URL = "https://frontend-task-1-qcxg.onrender.com";
 
 const API_PATHS = {
   LOGIN: "/api/auth/login",

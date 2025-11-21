@@ -10,7 +10,7 @@ const PORT = 5000;
 
 app.use(
   cors({
-    origin: "https://frontend-task-0.netlify.app/",
+    origin: "https://frontend-task-0.netlify.app",
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials: true,
   })

@@ -1,4 +1,4 @@
-const BASE_URL = "https://frontend-task-1-qcxg.onrender.com";
+const BASE_URL = "https://frontend-task-4.onrender.com";
 
 const API_PATHS = {
   LOGIN: "/api/auth/login",

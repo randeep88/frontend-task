@@ -13,7 +13,7 @@ app.use(
     origin: "https://frontend-task-one-alpha.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     credentials: true,
-  })
+  }),
 );
 app.use(express.json());
 

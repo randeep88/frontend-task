@@ -1,4 +1,6 @@
 import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+dotenv.config();
 
 export const verifyToken = (req, res, next) => {
   try {
@@ -10,7 +12,7 @@ export const verifyToken = (req, res, next) => {
     if (!token) {
       return res.status(401).json({ message: "Unauthorized, No token found" });
     }
-    const decoded = jwt.verify(token, "secretKey");
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = decoded;
     next();
   } catch (error) {

@@ -1,9 +1,11 @@
 import ImageKit from "imagekit";
+import dotenv from "dotenv";
+dotenv.config();
 
 let imagekit = new ImageKit({
-  publicKey: "public_eGO7Us7zj6hf295xIN1rBGFwvKU=",
-  privateKey: "private_xvrMdPIdQMD9W4nvOtwceTctHNo=",
-  urlEndpoint: "https://ik.imagekit.io/yxxt8q97s",
+  publicKey: process.env.IMAGEKIT_PUBLIC_KEY,
+  privateKey: process.env.IMAGEKIT_PRIVATE_KEY,
+  urlEndpoint: process.env.IMAGEKIT_URL_ENDPOINT,
 });
 
 export default imagekit;

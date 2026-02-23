@@ -2,6 +2,8 @@ import User from "../models/User.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import imagekit from "../config/imagekit.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 export const register = async (req, res) => {
   try {
@@ -81,7 +83,9 @@ export const login = async (req, res) => {
 
     const payload = { id: user._id };
 
-    const token = jwt.sign(payload, "secretKey", { expiresIn: "1d" });
+    const token = jwt.sign(payload, process.env.JWT_SECRET, {
+      expiresIn: "1d",
+    });
 
     return res.status(200).json({
       message: "User logged in successfully",
